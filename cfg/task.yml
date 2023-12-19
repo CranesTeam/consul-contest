@@ -1,0 +1,3 @@
+tasks:
+  - name: gen_ai_full_name
+    limit: 10

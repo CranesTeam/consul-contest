@@ -1,0 +1,5 @@
+# curl localhost:8000/param
+GET localhost:8000/param
+
+###
+
