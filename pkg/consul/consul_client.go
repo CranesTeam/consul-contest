@@ -13,8 +13,9 @@ import (
 var defaultConfig kv.TaskConfig
 
 const (
-	MaxAge      = 10 * time.Minute
-	DefaultPath = "cfg/task.yml"
+	MaxAge        = 10 * time.Minute
+	DefaultPath   = "cfg/task.yml"
+	ByteArraySize = 256
 )
 
 func NewClient(addr string) (*Client, error) {
@@ -45,7 +46,7 @@ func NewKVClientAndLocal(c *Client) *KVClient {
 		log.Fatalln("Couldn't find config.", err)
 	}
 
-	bb := make([]byte, 256)
+	bb := make([]byte, ByteArraySize)
 	size, err := file.Read(bb)
 	if err != nil {
 		log.Fatalln("Couldn't read config.", err)
