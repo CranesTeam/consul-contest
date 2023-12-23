@@ -1,3 +1,3 @@
 tasks:
-  - name: gen_ai_full_name
+  - name: cfg_name
     limit: 10

@@ -6,7 +6,7 @@
 4. create file golang/task.yml
 ```yaml
 tasks:
-  - name: gen_ai_full_name
+  - name: cfg_name
     limit: 10
 ```
 
